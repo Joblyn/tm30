@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components/macro";
 export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
+    transition: .15s all ease;
   }
   body {
     font-family: 'Graphik', 'Helvetica Neue', 'Arial', sans-serif;
@@ -15,5 +16,4 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #fff;
     margin: 0;
   }
-
 `;

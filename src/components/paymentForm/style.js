@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
 
-//  Container, Pair, Group, Input
 export const Container = styled.form`
   padding: 20px;
   border: solid 1px #eaeaea;
@@ -11,7 +10,7 @@ export const Container = styled.form`
 export const Error = styled.p`
   font-size: 13px;
     border-radius: 2px;
-    margin-bottom: 20px;
+    margin: 5px;
     text-align: center;
     clear: both;
     color: #F20000;
@@ -39,7 +38,6 @@ export const Select = styled.select`
   cursor: pointer;
   background: white;
   display: block;
-  ${'' /* ${({ banks }) => !banks && " height: 35px"}; */}
   height: 35px;
   font-size: 14px;
   width: 100%;
@@ -51,8 +49,9 @@ export const Select = styled.select`
   outline: none;
   margin: 0;
   text-transform: none;
+  ${({currency }) => currency ? "background: transparent; opacity: 0.65" : "white" };
 
-  :after {
+  ::after {
     position: absolute;
     content: "";
     bottom: 15px;
@@ -104,11 +103,11 @@ export const Pair = styled.div`
   }
 `;
 export const Button = styled.button`
-      color: white;
+    color: white;
     border: none;
     border-radius: 4px;
     color: white;
-    background-color: #3bb75e;
+    background-color:${({ loading }) => loading ? "#fff" : "#3bb75e"};
     border-color: #3bb75e;
     box-shadow: none;
     cursor: pointer;
@@ -125,7 +124,7 @@ export const Button = styled.button`
     text-decoration: none;
     -webkit-appearance: button;
     appearance: button;
-    text-transform: none;
+    text-transform: uppercase;
     overflow: visible;
 `;
 export const Label = styled.label`

@@ -31,8 +31,26 @@
   font-size: 14px;
   text-align: center;
 }
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
-  margin: 0 !important;
-} */
+
+.link {
+  color: rgb(76, 175, 80);
+  text-decoration: none;
+  /* text-transform: capitalize; */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  color: rgb(73, 160, 76);
+}
+
+.right {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button:disabled {
+  background-color: rgb(136 203 139);
+}
